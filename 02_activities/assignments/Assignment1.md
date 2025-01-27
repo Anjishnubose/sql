@@ -110,7 +110,7 @@ Please do not pick the exact same tables that I have already diagrammed. For exa
 
 **ANSWER**
 
-<img src="./images/Logical_Model.png" width="600">
+<img src="./images/Logical_Model_corrected.png" width="600">
 
 ## Section 2:
 You can start this section following *session 2*.
