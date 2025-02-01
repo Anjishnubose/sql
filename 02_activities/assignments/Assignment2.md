@@ -45,8 +45,30 @@ There are several tools online you can use, I'd recommend [Draw.io](https://www.
 
 **HINT:** You do not need to create any data for this prompt. This is a conceptual model only. 
 
+##
+<img src="./images/Logical_Model_BookStore.png" width="600">
+
+```
+We have 7 tables to keep track of
+- books
+- customers
+- vendors
+- employees
+- sales
+- orders
+- date
+```
+
+
 #### Prompt 2
 We want to create employee shifts, splitting up the day into morning and evening. Add this to the ERD.
+
+##
+<img src="./images/Logical_Model_BookStore_wShift.png" width="600">
+
+```
+Added shift columns in employees and sales table.
+```
 
 #### Prompt 3
 The store wants to keep customer addresses. Propose two architectures for the CUSTOMER_ADDRESS table, one that will retain changes, and another that will overwrite. Which is type 1, which is type 2? 
@@ -54,8 +76,15 @@ The store wants to keep customer addresses. Propose two architectures for the CU
 **HINT:** search type 1 vs type 2 slowly changing dimensions. 
 
 ```
-Your answer...
+- type 1 keeps updating the details in the table. So there will always be only one entry per customer and hence the 1-1 relation with customer table.
 ```
+
+<img src="./images/Logical_Model_BookStore_type1.png" width="600">
+
+```
+- type 2 tracks the history of changes. So there may be multiple entries per for the same customer since they can move addresses. Therefore the many-1 relation with customer table.
+```
+<img src="./images/Logical_Model_BookStore_type2.png" width="600">
 
 ***
 
